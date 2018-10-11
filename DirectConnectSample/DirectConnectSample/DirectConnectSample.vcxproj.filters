@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Source Files\DirectConnect">
+      <UniqueIdentifier>{3c245411-1e12-4526-88f9-936712b86170}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectConnect">
+      <UniqueIdentifier>{014f4a4d-3edb-40e6-ac12-b8817777c099}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{9631899d-5075-42f5-806e-7cfc2def2093}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\IDL Files">
+      <UniqueIdentifier>{dbb74b69-9cb6-42c7-9ed8-9526e5b10dbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\IDL Files\Generated">
+      <UniqueIdentifier>{e7aeb3fd-b095-4675-8b81-c37e94cd50c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\General RPC">
+      <UniqueIdentifier>{89043287-50c3-401f-9fbd-8ee3e1954648}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\General RPC\Header Files">
+      <UniqueIdentifier>{d67e9731-354f-4d41-a11f-08cafdd83cd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\General RPC\Source Files">
+      <UniqueIdentifier>{fd0933f8-6e9e-4ca0-90e2-c12c7ad94f03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Platform">
+      <UniqueIdentifier>{7cd3d21e-829d-4d3e-a135-e1cb7361a91c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Platform\Header Files">
+      <UniqueIdentifier>{fa170658-dfff-473e-b65f-e13925fd15b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Platform\Source Files">
+      <UniqueIdentifier>{969f767a-8d2d-4f6d-a01b-d1f9ab9e378d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DirectConnectionInstance.cpp">
+      <Filter>Source Files\DirectConnect</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DirectConnectionLibLink.cpp">
+      <Filter>Source Files\DirectConnect</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DirectConnectionIPCClient.cpp">
+      <Filter>Source Files\DirectConnect</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Common\RpcBaseServer.cpp">
+      <Filter>Common\General RPC\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\DirectConnectionTLHostInterface_s.c">
+      <Filter>Common\IDL Files\Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\DirectConnectionTLInterface_c.c">
+      <Filter>Common\IDL Files\Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Common\RpcBaseClient.cpp">
+      <Filter>Common\General RPC\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Common\RpcCommon.cpp">
+      <Filter>Common\General RPC\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DirectConnectionGeneric.cpp">
+      <Filter>Source Files\DirectConnect</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DirectConnectionCrossProcessObjects.cpp">
+      <Filter>Source Files\DirectConnect</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Common\SharedMemory.cpp">
+      <Filter>Common\Platform\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DirectConnectionIPCClientWin.cpp">
+      <Filter>Source Files\DirectConnect</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DirectConnectionInstanceCreator.cpp">
+      <Filter>Source Files\DirectConnect</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\DirectConnectionInstance.h">
+      <Filter>Header Files\DirectConnect</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\DirectConnectionLibLink.h">
+      <Filter>Header Files\DirectConnect</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\DirectConnectionIPCClient.h">
+      <Filter>Header Files\DirectConnect</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Common\RpcBaseServer.h">
+      <Filter>Common\General RPC\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Common\RpcBaseClient.h">
+      <Filter>Common\General RPC\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Common\RpcCommon.h">
+      <Filter>Common\General RPC\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\DirectConnectionGeneric.h">
+      <Filter>Header Files\DirectConnect</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\DirectConnectionCrossProcessObjects.h">
+      <Filter>Header Files\DirectConnect</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\DirectConnectionInterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Common\Platform.h">
+      <Filter>Common\Platform\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Common\PlatformWin.h">
+      <Filter>Common\Platform\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Common\SharedMemory.h">
+      <Filter>Common\Platform\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\DirectConnectionTypes.h">
+      <Filter>Header Files\DirectConnect</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\DirectConnectionIPCClientWin.h">
+      <Filter>Header Files\DirectConnect</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\DirectConnectionInstanceCreator.h">
+      <Filter>Header Files\DirectConnect</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\DirectConnectionIPCSettings.h">
+      <Filter>Header Files\DirectConnect</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\DirectConnectionIPCClientBase.h">
+      <Filter>Header Files\DirectConnect</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\DirectConnectionIPCClientOSX.h">
+      <Filter>Header Files\DirectConnect</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\DirectConnectionNTXInterfaces.h">
+      <Filter>Header Files\DirectConnect</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="..\..\IDLProject\DirectConnectionTLHostInterface.idl">
+      <Filter>Common\IDL Files</Filter>
+    </Midl>
+    <Midl Include="..\..\IDLProject\DirectConnectionTLInterface.idl">
+      <Filter>Common\IDL Files</Filter>
+    </Midl>
+    <Midl Include="..\..\IDLProject\DirectConnectionTLTypes.idl">
+      <Filter>Common\IDL Files</Filter>
+    </Midl>
+  </ItemGroup>
+</Project>

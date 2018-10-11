@@ -1,0 +1,32 @@
+
+cpp_quote("#pragma pack( push, 4 )")
+
+[
+   // A unique identifier that distinguishes this interface from other interfaces.
+   uuid(F6A7AAF5-E634-44A4-BAF5-8D8F7AF2FB40),
+
+   // This is version 1.0 of this interface.
+   version(1.0)
+]
+
+
+interface DirectConnectionTLHostInterface
+{
+	import "DirectConnectionTLTypes.idl";
+	/**
+	 * Titler Live connected event to Titler Live Host.
+	 *
+	 */
+	void DirectConnectionClientConnected([in] DCTLClientID clientID, [in] int nServerPort,
+		[in] DCTLProcessID processID, [out] DCTLProcessID* pHostProcessId);
+
+	/**
+	 *
+	 * Get from from NLE for Titler Designer background
+	 */
+	int DirectConnectionGetHostFrame([in] DCTLClientID clientID, [in] DCTLInstanceID instanceID, [in] int nVideoFrameType,
+		[in, out] DCTLVideoRenderInfoIDL* pRenderInfo, [in, out] DCTLVideoFrameParamsIDL* pFrame);
+
+}
+
+cpp_quote("#pragma pack( pop )")

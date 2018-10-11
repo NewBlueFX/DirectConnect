@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{2893d4bc-2580-4e91-9ff6-521f5678eef4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\General RPC">
+      <UniqueIdentifier>{97ea5d0e-0c04-4cc1-b3a0-ff00dfcbb3cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Platform">
+      <UniqueIdentifier>{e481ca69-722e-40e8-9597-ac5994c7eac5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Platform\Header Files">
+      <UniqueIdentifier>{baee4512-4a05-4173-b796-cc181ceceacf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Platform\Source Files">
+      <UniqueIdentifier>{e1e68d13-c595-4be8-b387-5318ebe1d3ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\General RPC\Header Files">
+      <UniqueIdentifier>{f711fd69-7864-4ec8-8f02-af02243335f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\General RPC\Soure Files">
+      <UniqueIdentifier>{47eb1aca-ed43-41f7-92e0-9bfe36040020}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Include\DirectConnectionInterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\DirectConnectionNTXInterfaces.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\DirectConnectionCrossProcessObjects.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\DirectConnectionGeneric.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\DirectConnectionInstanceCreator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\DirectConnectionIPCClientBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\DirectConnectionTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\DirectConnectionInstance.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\DirectConnectionIPCClient.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Common\RpcBaseClient.h">
+      <Filter>Common\General RPC\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Common\RpcBaseServer.h">
+      <Filter>Common\General RPC\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Common\RpcCommon.h">
+      <Filter>Common\General RPC\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\IDLProject\DirectConnectionTLInterface_h.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\IDLProject\DirectConnectionTLHostInterface_h.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\IDLProject\DirectConnectionTLTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\DirectConnectionIPCSettings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\DirectConnectionIPCClientWin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Common\Platform.h">
+      <Filter>Common\Platform\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Common\PlatformWin.h">
+      <Filter>Common\Platform\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Common\SharedMemory.h">
+      <Filter>Common\Platform\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\DirectConnectionLibLink.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Source\DirectConnectionCrossProcessObjects.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\DirectConnectionGeneric.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\DirectConnectionInstance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\DirectConnectionInstanceCreator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\DirectConnectionIPCClient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\DirectConnectionIPCClientWin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\DirectConnectionLibLink.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Common\RpcBaseServer.cpp">
+      <Filter>Common\General RPC\Soure Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Common\RpcBaseClient.cpp">
+      <Filter>Common\General RPC\Soure Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Common\RpcCommon.cpp">
+      <Filter>Common\General RPC\Soure Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Common\SharedMemory.cpp">
+      <Filter>Common\Platform\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\IDLProject\DirectConnectionTLInterface_c.c">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\IDLProject\DirectConnectionTLHostInterface_s.c">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

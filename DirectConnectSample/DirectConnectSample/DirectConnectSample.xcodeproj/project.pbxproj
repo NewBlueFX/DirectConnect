@@ -1,0 +1,387 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		570261F81F6FD89500647DDA /* DirectConnectionIPCClientOSX.mm in Sources */ = {isa = PBXBuildFile; fileRef = 570261F71F6FD89500647DDA /* DirectConnectionIPCClientOSX.mm */; };
+		573560FC1F694B99003F1030 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 573560FB1F694B99003F1030 /* main.cpp */; };
+		576F60CA1F6FAB8C006073AA /* DirectConnectionCrossProcessObjects.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576F60C31F6FAB8C006073AA /* DirectConnectionCrossProcessObjects.cpp */; };
+		576F60CB1F6FAB8C006073AA /* DirectConnectionGeneric.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576F60C41F6FAB8C006073AA /* DirectConnectionGeneric.cpp */; };
+		576F60CC1F6FAB8C006073AA /* DirectConnectionInstance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576F60C51F6FAB8C006073AA /* DirectConnectionInstance.cpp */; };
+		576F60CD1F6FAB8C006073AA /* DirectConnectionInstanceCreator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576F60C61F6FAB8C006073AA /* DirectConnectionInstanceCreator.cpp */; };
+		576F60CF1F6FAB8C006073AA /* DirectConnectionIPCClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576F60C81F6FAB8C006073AA /* DirectConnectionIPCClient.cpp */; };
+		5782C6731F712B4F00D11BAE /* SharedMemory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5782C6711F712B4F00D11BAE /* SharedMemory.cpp */; };
+		5782C6791F712EED00D11BAE /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5782C6781F712EED00D11BAE /* Carbon.framework */; };
+		57DF15641F694F41004AD2C5 /* DirectConnectionLibLink.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5733CFD81F694E8C0089A5B9 /* DirectConnectionLibLink.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		57A49AD91F6949BE002A95A2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		570261F61F6FD89500647DDA /* DirectConnectionIPCClientOSX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DirectConnectionIPCClientOSX.h; path = ../../Source/DirectConnectionIPCClientOSX.h; sourceTree = SOURCE_ROOT; };
+		570261F71F6FD89500647DDA /* DirectConnectionIPCClientOSX.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = DirectConnectionIPCClientOSX.mm; path = ../../Source/DirectConnectionIPCClientOSX.mm; sourceTree = SOURCE_ROOT; };
+		5704A9781F6FB89000442202 /* DirectConnectionTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DirectConnectionTypes.h; path = ../../Source/DirectConnectionTypes.h; sourceTree = SOURCE_ROOT; };
+		570F18E91F6FDB6E002FBA9F /* DirectConnectionIPCInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DirectConnectionIPCInterface.h; path = ../../Source/DirectConnectionIPCInterface.h; sourceTree = SOURCE_ROOT; };
+		5733CFD81F694E8C0089A5B9 /* DirectConnectionLibLink.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DirectConnectionLibLink.cpp; path = ../../Source/DirectConnectionLibLink.cpp; sourceTree = SOURCE_ROOT; };
+		5733CFD91F694E8C0089A5B9 /* DirectConnectionLibLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DirectConnectionLibLink.h; path = ../../Source/DirectConnectionLibLink.h; sourceTree = SOURCE_ROOT; };
+		573560FB1F694B99003F1030 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = SOURCE_ROOT; };
+		5742342D1FC6B9C80045F597 /* DirectConnectionNTXInterfaces.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DirectConnectionNTXInterfaces.h; path = ../../Include/DirectConnectionNTXInterfaces.h; sourceTree = SOURCE_ROOT; };
+		576F60C31F6FAB8C006073AA /* DirectConnectionCrossProcessObjects.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DirectConnectionCrossProcessObjects.cpp; path = ../../Source/DirectConnectionCrossProcessObjects.cpp; sourceTree = SOURCE_ROOT; };
+		576F60C41F6FAB8C006073AA /* DirectConnectionGeneric.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DirectConnectionGeneric.cpp; path = ../../Source/DirectConnectionGeneric.cpp; sourceTree = SOURCE_ROOT; };
+		576F60C51F6FAB8C006073AA /* DirectConnectionInstance.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DirectConnectionInstance.cpp; path = ../../Source/DirectConnectionInstance.cpp; sourceTree = SOURCE_ROOT; };
+		576F60C61F6FAB8C006073AA /* DirectConnectionInstanceCreator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DirectConnectionInstanceCreator.cpp; path = ../../Source/DirectConnectionInstanceCreator.cpp; sourceTree = SOURCE_ROOT; };
+		576F60C81F6FAB8C006073AA /* DirectConnectionIPCClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DirectConnectionIPCClient.cpp; path = ../../Source/DirectConnectionIPCClient.cpp; sourceTree = SOURCE_ROOT; };
+		5782C66B1F7125FE00D11BAE /* DirectConnectionIPCSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DirectConnectionIPCSettings.h; path = ../../Source/DirectConnectionIPCSettings.h; sourceTree = SOURCE_ROOT; };
+		5782C66F1F712B4F00D11BAE /* Platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Platform.h; path = ../../Source/Common/Platform.h; sourceTree = SOURCE_ROOT; };
+		5782C6701F712B4F00D11BAE /* PlatformMac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlatformMac.h; path = ../../Source/Common/PlatformMac.h; sourceTree = SOURCE_ROOT; };
+		5782C6711F712B4F00D11BAE /* SharedMemory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SharedMemory.cpp; path = ../../Source/Common/SharedMemory.cpp; sourceTree = SOURCE_ROOT; };
+		5782C6721F712B4F00D11BAE /* SharedMemory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SharedMemory.h; path = ../../Source/Common/SharedMemory.h; sourceTree = SOURCE_ROOT; };
+		5782C6741F712B5A00D11BAE /* initguid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = initguid.h; path = ../../Source/Common/Mac/initguid.h; sourceTree = SOURCE_ROOT; };
+		5782C6781F712EED00D11BAE /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		578FF5F61F6FA9AD00CF386A /* DirectConnectionCrossProcessObjects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DirectConnectionCrossProcessObjects.h; path = ../../Source/DirectConnectionCrossProcessObjects.h; sourceTree = SOURCE_ROOT; };
+		578FF5F71F6FA9AD00CF386A /* DirectConnectionGeneric.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DirectConnectionGeneric.h; path = ../../Source/DirectConnectionGeneric.h; sourceTree = SOURCE_ROOT; };
+		578FF5F81F6FA9AD00CF386A /* DirectConnectionInstance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DirectConnectionInstance.h; path = ../../Source/DirectConnectionInstance.h; sourceTree = SOURCE_ROOT; };
+		578FF5F91F6FA9AD00CF386A /* DirectConnectionInstanceCreator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DirectConnectionInstanceCreator.h; path = ../../Source/DirectConnectionInstanceCreator.h; sourceTree = SOURCE_ROOT; };
+		578FF5FB1F6FA9AD00CF386A /* DirectConnectionIPCClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DirectConnectionIPCClient.h; path = ../../Source/DirectConnectionIPCClient.h; sourceTree = SOURCE_ROOT; };
+		57A49ADB1F6949BE002A95A2 /* DirectConnectSample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DirectConnectSample; sourceTree = BUILT_PRODUCTS_DIR; };
+		57CC705F1F70B85A001AFE19 /* DirectConnectionInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DirectConnectionInterface.h; path = ../../Include/DirectConnectionInterface.h; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		57A49AD81F6949BE002A95A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5782C6791F712EED00D11BAE /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		573560FD1F694CDF003F1030 /* DirectConnect */ = {
+			isa = PBXGroup;
+			children = (
+				573560FE1F694CED003F1030 /* Header Files */,
+				573560FF1F694CF4003F1030 /* Source Files */,
+			);
+			name = DirectConnect;
+			sourceTree = "<group>";
+		};
+		573560FE1F694CED003F1030 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				578FF5F61F6FA9AD00CF386A /* DirectConnectionCrossProcessObjects.h */,
+				578FF5F71F6FA9AD00CF386A /* DirectConnectionGeneric.h */,
+				578FF5F81F6FA9AD00CF386A /* DirectConnectionInstance.h */,
+				578FF5F91F6FA9AD00CF386A /* DirectConnectionInstanceCreator.h */,
+				57CC705F1F70B85A001AFE19 /* DirectConnectionInterface.h */,
+				5742342D1FC6B9C80045F597 /* DirectConnectionNTXInterfaces.h */,
+				578FF5FB1F6FA9AD00CF386A /* DirectConnectionIPCClient.h */,
+				570261F61F6FD89500647DDA /* DirectConnectionIPCClientOSX.h */,
+				570F18E91F6FDB6E002FBA9F /* DirectConnectionIPCInterface.h */,
+				5782C66B1F7125FE00D11BAE /* DirectConnectionIPCSettings.h */,
+				5733CFD91F694E8C0089A5B9 /* DirectConnectionLibLink.h */,
+				5704A9781F6FB89000442202 /* DirectConnectionTypes.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		573560FF1F694CF4003F1030 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				576F60C31F6FAB8C006073AA /* DirectConnectionCrossProcessObjects.cpp */,
+				576F60C41F6FAB8C006073AA /* DirectConnectionGeneric.cpp */,
+				576F60C51F6FAB8C006073AA /* DirectConnectionInstance.cpp */,
+				576F60C61F6FAB8C006073AA /* DirectConnectionInstanceCreator.cpp */,
+				576F60C81F6FAB8C006073AA /* DirectConnectionIPCClient.cpp */,
+				570261F71F6FD89500647DDA /* DirectConnectionIPCClientOSX.mm */,
+				5733CFD81F694E8C0089A5B9 /* DirectConnectionLibLink.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		5782C66C1F712B2800D11BAE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5782C66D1F712B2E00D11BAE /* Header Files */,
+				5782C66E1F712B3600D11BAE /* Source Files */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		5782C66D1F712B2E00D11BAE /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				5782C6741F712B5A00D11BAE /* initguid.h */,
+				5782C66F1F712B4F00D11BAE /* Platform.h */,
+				5782C6701F712B4F00D11BAE /* PlatformMac.h */,
+				5782C6721F712B4F00D11BAE /* SharedMemory.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		5782C66E1F712B3600D11BAE /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				5782C6711F712B4F00D11BAE /* SharedMemory.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		5782C6751F712EA600D11BAE /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				5782C6781F712EED00D11BAE /* Carbon.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		57A49AD21F6949BE002A95A2 = {
+			isa = PBXGroup;
+			children = (
+				57A49ADD1F6949BE002A95A2 /* DirectConnectSample */,
+				5782C6751F712EA600D11BAE /* External Frameworks and Libraries */,
+				57A49ADC1F6949BE002A95A2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		57A49ADC1F6949BE002A95A2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				57A49ADB1F6949BE002A95A2 /* DirectConnectSample */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		57A49ADD1F6949BE002A95A2 /* DirectConnectSample */ = {
+			isa = PBXGroup;
+			children = (
+				5782C66C1F712B2800D11BAE /* Common */,
+				573560FD1F694CDF003F1030 /* DirectConnect */,
+				573560FB1F694B99003F1030 /* main.cpp */,
+			);
+			path = DirectConnectSample;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		57A49ADA1F6949BE002A95A2 /* DirectConnectSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57A49AE21F6949BE002A95A2 /* Build configuration list for PBXNativeTarget "DirectConnectSample" */;
+			buildPhases = (
+				57A49AD71F6949BE002A95A2 /* Sources */,
+				57A49AD81F6949BE002A95A2 /* Frameworks */,
+				57A49AD91F6949BE002A95A2 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DirectConnectSample;
+			productName = DirectConnectSample;
+			productReference = 57A49ADB1F6949BE002A95A2 /* DirectConnectSample */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		57A49AD31F6949BE002A95A2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = NewBlue;
+				TargetAttributes = {
+					57A49ADA1F6949BE002A95A2 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 57A49AD61F6949BE002A95A2 /* Build configuration list for PBXProject "DirectConnectSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 57A49AD21F6949BE002A95A2;
+			productRefGroup = 57A49ADC1F6949BE002A95A2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				57A49ADA1F6949BE002A95A2 /* DirectConnectSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		57A49AD71F6949BE002A95A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				576F60CB1F6FAB8C006073AA /* DirectConnectionGeneric.cpp in Sources */,
+				576F60CC1F6FAB8C006073AA /* DirectConnectionInstance.cpp in Sources */,
+				570261F81F6FD89500647DDA /* DirectConnectionIPCClientOSX.mm in Sources */,
+				57DF15641F694F41004AD2C5 /* DirectConnectionLibLink.cpp in Sources */,
+				573560FC1F694B99003F1030 /* main.cpp in Sources */,
+				5782C6731F712B4F00D11BAE /* SharedMemory.cpp in Sources */,
+				576F60CF1F6FAB8C006073AA /* DirectConnectionIPCClient.cpp in Sources */,
+				576F60CD1F6FAB8C006073AA /* DirectConnectionInstanceCreator.cpp in Sources */,
+				576F60CA1F6FAB8C006073AA /* DirectConnectionCrossProcessObjects.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		57A49AE01F6949BE002A95A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					_DEBUG,
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../Include,
+					../../Source,
+					../../Source/Common,
+					../../Source/Common/Mac,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		57A49AE11F6949BE002A95A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = NDEBUG;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../Include,
+					../../Source,
+					../../Source/Common,
+					../../Source/Common/Mac,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		57A49AE31F6949BE002A95A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		57A49AE41F6949BE002A95A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		57A49AD61F6949BE002A95A2 /* Build configuration list for PBXProject "DirectConnectSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57A49AE01F6949BE002A95A2 /* Debug */,
+				57A49AE11F6949BE002A95A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57A49AE21F6949BE002A95A2 /* Build configuration list for PBXNativeTarget "DirectConnectSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57A49AE31F6949BE002A95A2 /* Debug */,
+				57A49AE41F6949BE002A95A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 57A49AD31F6949BE002A95A2 /* Project object */;
+}

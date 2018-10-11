@@ -1,0 +1,91 @@
+
+cpp_quote("#pragma pack( push, 4 )")
+
+[
+   // A unique identifier that distinguishes this interface from other interfaces.
+   uuid(E04F87AC-4493-4155-90A5-F45F416C8008),
+
+   // This is version 1.0 of this interface.
+   version(1.0)
+]
+
+
+interface DirectConnectionTLInterface
+{
+	import "DirectConnectionTLTypes.idl";
+
+
+	/**
+	 * This method will initialize instance with requested parameters. Also it will open Main UI.
+	 * nDCChannel is number of channel which will be used to receive a video stream. */
+	int DirectConnectionInitialize([in] DCTLClientID clientID, [in] DCTLInstanceID instanceID, [in] int nDCChannel,
+		// Video settings
+		[in] int nWidth, [in] int nHeight, [in] double dFrameRate, [in] double dPixelAspectRatio, [in] boolean bInterlaced,
+		// Audio settings
+		[in] int nSampleRate, [in] int nNumChannels,
+		// Time settings
+		[out] double* pdStartTime);
+
+	/**
+     * Render method.
+	 * Returns 'true' when new frame is ready, else the shared memory will contain previous frame.
+	 * Set '0' for reserved. It is not used for now. */
+	int DirectConnectionGetVideoFrame([in] DCTLClientID clientID, [in] DCTLInstanceID instanceID, [in] int nDCChannel, [in, out] DCTLVideoFrameParamsIDL* pFrame, [in] double dTime);
+
+	/**
+	 * Render audio frame.
+	 * pBuffer - buffer to return audio data
+	 * DCTLAudioFrameParamsIDL.sampleCount - number of samples to return. Buffer size must be at least sampleCount * numChannels long.
+	 * (numChannels should be set in InitializeDirectConnection call) */
+	int DirectConnectionGetAudioFrame([in] DCTLClientID clientID, [in] DCTLInstanceID instanceID, [in] int nDCChannel, [in, out] DCTLAudioFrameParamsIDL* pFrame, [in] double dTime);
+
+	/**
+	 * Returns actual video settings. */
+	int DirectConnectionGetVideoSettings([in] DCTLClientID clientID, [in] DCTLInstanceID instanceID, [in] int nDCChannel, [out] int* pnWidth, [out] int* pnHeight,
+		[out] double* pdFrameRate, [out] double* pdPixelAspectRatio, [out] boolean* pbInterlaced);
+
+	/**
+	 * Returns actual audio settings. */
+	int DirectConnectionGetAudioSettings([in] DCTLClientID clientID, [in] DCTLInstanceID instanceID, [in] int nDCChannel, [out] int* pnSampleRate, [out] int* pnNumChannels);
+
+	/**
+	 * Get metadata, if it exists. */
+	int DirectConnectionGetMetadataFrame([in] DCTLClientID clientID,
+		[in] DCTLInstanceID instanceID, [in] int nDCChannel,
+		[out] long* plBufferSize, // length of out string, including zero terminator
+		[out, size_is(, *plBufferSize)] char** ppOutBuffer);
+
+	/**
+	 * To send metadata to channel */
+	int DirectConnectionSendMetadataFrame([in] DCTLClientID clientID, [in] DCTLInstanceID instanceID, [in] int nDCChannel, [in, string] const char * pszData);
+	
+	// Service functions:
+
+	/**
+	 * Send event to server that this client is connected.
+	 * serverPort - is port on which was started server on client side. */
+	void DirectConnectionClientConnect([in] DCTLClientID clientID, [in] int nServerPort);
+
+	/**
+	 * Send event to server that now client wil be disconnected. */
+	void DirectConnectionClientDisconnect([in] DCTLClientID clientID, [in] int nServerPort);
+
+	/**
+	 * Create new instance on server side with this ID. */
+	void DirectConnectionCreateInstance([in] DCTLClientID clientID, [in] DCTLInstanceID instanceID);
+
+	/**
+	 * Destroy instance on server side with this ID. */
+	void DirectConnectionDestroyInstance([in] DCTLClientID clientID, [in] DCTLInstanceID instanceID);
+
+	/**
+	 * Free shared memory object. */
+	int DirectConnectionFreeSharedMemory([in] DCTLClientID clientID, [in] DCTLInstanceID instanceID, [in] DCTLSharedMemoryType type);
+
+	/**
+	 * For example, you could use this function to check connection or close NTX standalone.
+	 * Use -1 for nDCChannel, if you send the channel independent command. */
+	int DirectConnectionSendGlobalMetadataFrame([in] int nDCChannel, [in, string] const char * pszData);
+}
+
+cpp_quote("#pragma pack( pop )")

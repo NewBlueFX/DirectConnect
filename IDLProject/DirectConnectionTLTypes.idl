@@ -1,0 +1,89 @@
+
+cpp_quote("#pragma pack( push, 4 )")
+
+typedef unsigned long long DCTLClientID;
+typedef unsigned long long DCTLInstanceID;
+typedef unsigned long DCTLProcessID;
+
+
+	// Stub enum for Pixels format.
+	typedef enum
+	{
+		IDL_DCTLPF_BGRA8 = 0,           // Standard Windows (and Intel) 32 bit pixel.
+		IDL_DCTLPF_ARGB8,               // Inverted pixel (used by AfterEffects.)
+		IDL_DCTLPF_YUVA8,               // 8 bit YUV format.
+		IDL_DCTLPF_BGRA32,              // BGRA 32 bit float format (128 bits.)
+		IDL_DCTLPF_ARGB32,              // Inverted pixel (used by AfterEffects.)
+		IDL_DCTLPF_YUVA32,              // 32 bit float YUV format.
+		IDL_DCTLPF_GRAY8,               // 8 bit per pixel gray.
+		IDL_DCTLPF_GRAY32,              // 32 bit gray float
+		IDL_DCTLPF_BGRA16,				// BGRA 16 bit float format. Used in GPU.
+		IDL_DCTLPF_ARGB16,				// ARGB 16 bit float format. Used in GPU.
+		IDL_DCTLPF_GRAY16,				// 16 bit float gray. Reserved for using in GPU
+		IDL_DCTLPF_YUY2,				///< Y, Cb, Y, Cr (1 component  8bit, 16bit/pixel) [Uncompress] EDIUS format,
+		IDL_DCTLPF_GRAY16U,				/// Use for EDIUS for alpha channel.
+		IDL_DCTLPF_YUVA_R408,			// 8 bit YUVA Apple format (http://developer.apple.com/quicktime/icefloe/dispatch027.html).
+		IDL_DCTLPF_YUVA_R4FL,			// 32 bit YUVA Apple format (http://developer.apple.com/quicktime/icefloe/dispatch027.html).
+		IDL_DCTLPF_RGBA8,		        // RGBA is generic OpenFX format. Used in Resolve.
+		IDL_DCTLPF_RGBA32               // RGBA 32 bit float format (128 bits.)
+	} DCTLVideoPixelFormatIDL;
+
+	// Stube struct for VideoFrameParams.
+	[ 
+		uuid(50CE03C2-C328-49D2-A6D8-01548FC94505),
+		version(1.0) 
+	] 
+	typedef struct DCTLVideoFrameParamsIDL 
+	{
+		int m_nWidth;					// Width in pixels of view area.
+		int m_nHeight;					// Height in pixels of view area.
+		int m_nSpan;					// Distance, in bytes, from line to line,.
+		int m_nDepth;					// Byte depth. 4 for standard BGRA color.
+		int m_nX;						// X origin in bitmap of the view area.
+		int m_nY;						// Y origin in bitmap of the view area.
+		DCTLVideoPixelFormatIDL m_pfFormat;	// Color format of pixels.
+		boolean m_bFlipped;				// The image is flipped vertically.
+		boolean m_bPremultAlpha;		// The RGB components are alpha premultiplied.
+	} DCTLVideoFrameParamsIDL;
+
+	// Stube struct for AudioFrameParams.
+	[
+		uuid(37DA9CA4-5739-4646-A624-D55C68D7644F),
+		version(1.0)
+	]
+	typedef struct DCTLAudioFrameParamsIDL
+	{
+		int m_nSampleRate;				// Sample rate.
+		int m_nChannels;				// Number of channels.
+		int m_nSampleCount;				// Number of samples.
+	} DCTLAudioFrameParamsIDL;
+
+	// Type of shared memory.
+	typedef enum
+	{
+		DCTLSM_RENDER_VIDEO_FRAME = 0,
+		DCTLSM_RENDER_AUDIO_FRAME = 1,
+		DCTLSM_RENDER_HOST_FRAME1 = 2,
+		DCTLSM_RENDER_HOST_FRAME2 = 3,
+	} DCTLSharedMemoryType;
+	
+	// Stube struct for DCTLRenderInfo.
+	[ 
+		uuid(C3867AC5-F335-4541-8AFF-1CF418753437),
+		version(1.0) 
+	] 
+	typedef struct DCTLVideoRenderInfoIDL
+	{
+		long    m_lValidFlags;  // Which fields are filled.
+		double  m_fProgress;    // Percentage of time in this effect (0 to 1)
+		double  m_fTime;        // Actual time, in seconds.
+		double  m_fDuration;    // Total duration (or 0, if not available.)
+		double  m_fFramesPerSec;// Frame rate.
+		double  m_fAspectRatio; // Pixel aspect ratio (for non-square pixels).
+		long    m_lFrame;       // Frame number.
+		long    m_nField;       // 1 for first interlace field, 2 for second, 3 for both.  
+		double  m_fScale;       // If the frame is larger or smaller than the intended resolution, this 
+								// tells the effect to scale up or down (for example, blur width in pixels.)
+	} DCTLVideoRenderInfoIDL;
+
+cpp_quote("#pragma pack( pop )")

@@ -1,0 +1,138 @@
+NOTE:
+- If you are debugging and some asserts annoy you (NBAssert), feel free to remove them. 
+
+Please build and run the example code in \DirectConnect\DirectConnectSample\DirectConnectSample\main.cpp to see DirectConnect at work.
+
+How to use DirectConnect:
+
+1. Declare DCTL::DirectConnectionLibLink instance in your code. This can be set up to either invoke OvrStream or TitlerLive, as follows:
+
+DCTL::DirectConnectionLibLink libLink(L"My Application", L"OvrStream");
+
+or
+
+DCTL::DirectConnectionLibLink libLink(L"My Application", L"TitlerLive");
+
+
+2. Query available sources:
+
+std::list<DCTL::PortAndChannels> sources = libLink.GetAvailableSources();
+
+These come from the instantiated TitlerLive. 
+If there are no available sources then returned value is empty. Try again later.
+
+
+3. Connect to source:
+
+DCTL::IDirectConnection* pInstance = libLink.CreateInstance(port, channel);
+
+For example, to connect to the first available source:
+
+// query list of all sources
+std::list<DCTL::PortAndChannels> sources = libLink.GetAvailableSources();
+
+if (!sources.empty())
+{
+	DCTL::Port port = sourceData.first;
+	DCTL::ChannelList channels = sourceData.second;
+	
+	if (!channels.empty())
+	{
+		// There are multiple channels for each port, use the first one.
+		DCTL::Channel channel = channels.front();
+		DCTL::IDirectConnection* pInstance = libLink.CreateInstance(port, channel);
+	}
+}
+
+
+4. Initialize video and audio settings for the connection instance:
+
+const int frameWidth = 1280;
+const int frameHeight = 720;
+const double frameRate = 30;
+const double pixelAspect = 1.0;
+const int audioSampleRate = 48000;
+const int audioChannels = 2;
+
+DCTL::DCResult initResult = pInstance->InitializeDirectConnection(frameWidth, frameHeight, frameRate, pixelAspect, audioSampleRate, audioChannels);
+if (initResult == DCTL::OK)
+{
+	// we can use direct connection instance
+}
+else
+{
+	// initialization failed
+}
+
+
+5. Allocate video frame and use IDirectConnection instance to get frame:
+
+const int bytesPerPixel = 4;
+
+// frame memory
+std::vector<unsigned char> videoBuffer(frameWidth * frameHeight * bytesPerPixel);
+
+// video frame structure
+DCTL::VideoFrameParams videoFrame(
+	videoBuffer.data(),			// buffer for video frame data
+	frameWidth,					// frame width
+	frameHeight,					// frame height
+	frameWidth * bytesPerPixel,	// frame row span in bytes
+	bytesPerPixel,				// color depth
+	DCTL::PF_BGRA8		// color format
+);
+
+// Get frame!
+DCTL::DCResult getFrameResult = pInstance->GetVideoFrame(&videoFrame);
+if (DCResult == DCTL::OK)
+{
+	// use videoFrame
+}
+
+
+6. Get metadata frame from DirectConnection instance:
+
+char* pszMetadata = nullptr;
+if (pInstance->GetMetadataFrame(&pszMetadata) == DCTL::OK)
+{
+	// parse metadata
+	
+	// ...
+
+	// free metadatamemory
+	pInstance->FreeMetadataFrame(pszMetadata);
+}
+
+7. Send metadata to DirectConnect instance:
+
+std::string metadataToSend = GetMetadataToSend();
+pInstance->SendMetadataFrame(metadataToSend.c_str());
+
+
+8. Allocate audio frame and get it from DirectConnect:
+
+int audioSampleCount = audioSampleRate;
+std::vector<float> audioBuffer(audioChannels * audioSampleCount);
+DCTL::AudioFrameParams audioFrame(
+	audioBuffer.data(),
+	audioSampleRate,
+	audioChannels,
+	audioSampleCount
+);
+
+DCTL::AudioFrameParams localAudioFrame = audioFrame;
+// GetAudioFrame function will correct localAudioFrame.m_nSampleCount if you have big memory chunk for audio samples.
+// Or GetAudioFrame will return DCTL::DCERR_BufferIsNotEnough, if the memory is not enough.
+if (pInstance->GetAudioFrame(&localAudioFrame) == DCTL::OK)
+{
+	// use audio frame
+	NBAssert(localAudioFrame.m_nSampleCount <= audioFrame.m_nSampleCount);
+}
+
+
+9. Release DirectConnection instance when you don't need it anymore:
+
+if (pInstance)
+{
+	pInstance->Release();
+}
